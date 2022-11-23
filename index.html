@@ -1,0 +1,262 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Wine</title>
+	<!-- Адаптив -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" sizes="180x180" href="../Wine/img/icons/logo.svg">
+	<link rel="icon" type="image/svg" sizes="16x16" href="../Wine/img/icons/logo.svg">
+	<link rel="icon" type="image/svg" sizes="32x32"href="../Wine/img/icons/logo.svg">
+	<link rel="manifest" href="../Wine/img/icons/logo.svg">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__logo">
+						<div class="header__img">
+							<img src="../Wine/img/icons/logo.svg" alt="wine__logo">
+						</div>
+					</div>
+					<div class="header__burger">
+						<span>
+
+						</span>
+					</div>
+					<nav class="header__menu">
+						<ul class="header__list">
+							<li>
+								<i class="fa-solid fa-phone"></i>
+								<p class="header__link">+7(987)654-32-10</p>
+							</li>
+							<li>
+								<i class="fa-solid fa-envelope"></i>
+								<p class="header__link">weeweewine@gmail.com</p>
+							</li>
+							<li>
+								<button class="button header__button">Связаться с нами</button>
+							</li>
+						</ul>
+					</nav>
+					<div>
+						<div class="header__counter">
+							<button class="header__button-small" onclick="headerPage.handlerOpenShoppingPage();"><img src="../Wine/img/icons/cart.svg" alt="cart"></button>
+							<p id='header' class="header__counter__num">
+							</p>
+						</div>    
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="tab">
+				<div class="tab__nav">
+					<div class="container">
+						<div class="tab__nav__row">
+							<div class="tab__link" id="tab__btn">Главная</div>
+							<div class="tab__link" id="tab__btn">Каталог</div>
+							<div class="tab__link" id="tab__btn">Контакты</div>
+							<div class="tab__indicator" id="tab__indicator"></div>
+						</div>
+					</div>
+				</div>
+				<div class="tab__body">
+					<div class="container">
+						<div class="tab__item" id="tab__item">
+							<div class="tab__intro">
+								<img src="../Wine/img/main/main-intro.webp" alt="main-intro">
+								<h1 class="tab__intro__title">Лучшие сорта вин со всего мира</h1>
+								<button id="tab__about__btn" class="tab__button button">Подробнее →</button>
+							</div>
+							<div id="tab__about" class="tab__about">
+								<h4 class="tab__about__title tab__title">О компании</h4>
+								<div class="tab__about__row">
+									<div class="tab__about__img"><img src="../Wine/img/main/main-about.webp" alt="main-about"></div>
+									<div class="tab__about__text">
+										<p>Добро пожаловать</p>
+										<p>Компания WeeWeeWine занимается продажей лучших сортов вин со всего мира с 2015 года. Мы работаем только с крупными и проверенными производителями без посредников и ставим приоритетом качество предлагаемой продукции.</p>
+										<p>Мы регулярно проводим экспертизы вин как по своей инициативе, так и по просьбе покупателей.</p>
+										<button id="tab__catalog__btn" class="tab__about__button button">Смотреть продукцию →</button>
+									</div>
+								</div>
+							</div>
+							<div class="tab__why">
+								<h4 class="tab__why__title tab__title">Почему Вы должны выбрать нас</h4>
+								<div class="tab__why__row">
+									<div class="tab__why__item">
+										<div class="tab__why__img">
+											<img src="../Wine/img/main/main-choice-1.webp" alt="main-choice-1">
+										</div>
+										<h5 class="tab__why__title">Проверенные поставщики</h5>
+										<p class="tab__why__text">Мы сотрудничаем только с проверенными поставщиками, поэтому всю продукцию Вы покупаете напрямую от производителя без посредников</p>
+									</div>
+									<div class="tab__why__item">
+										<div class="tab__why__img">
+											<img src="../Wine/img/main/main-choice-2.webp" alt="main-choice-2">
+										</div>
+										<h5 class="tab__why__title">Регулярная экспертиза</h5>
+										<p class="tab__why__text">Мы регулярно проводим экспертные оценки качества как самих вин, так и условий их хранения, поэтому Вы можете не бояться, что приобрете некачественное вино</p>
+									</div>
+									<div class="tab__why__item">
+										<div class="tab__why__img">
+											<img src="../Wine/img/main/main-choice-3.webp" alt="main-choice-3">
+										</div>
+										<h5 class="tab__why__title">Огромный выбор</h5>
+										<p class="tab__why__text">Приходя в наш магазин, у Вас будет огромный выбор различных и экзотических сортов вин со всех уголков мира от Армении до Аргентины</p>
+									</div>
+								</div>
+							</div>
+							<div class="tab__gallery">
+								<h4 class="tab__gallery__title tab__title">Галерея</h4>
+								<div class="slider">
+									<div class="slider__item">
+										<img src="../Wine/img/slider/slider-1.webp" alt="slider-1">
+									</div>
+									<div class="slider__item">
+										<img src="../Wine/img/slider/slider-2.webp" alt="slider-2">
+									</div>
+									<div class="slider__item">
+										<img src="../Wine/img/slider/slider-3.webp" alt="slider-3">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab__item" id="tab__item">
+							<div class="tab__intro">
+								<img src="../Wine/img/main/main-about.webp" alt="main-intro">
+							</div>
+							<div class="tab__products" id="products">
+							</div>
+						</div>
+						<div class="tab__item" id="tab__item">
+							<div class="tab__intro">
+								<img src="../Wine/img/main/main-contact.webp" alt="main-intro">
+							</div>
+							<div class="tab__contacts">
+								<div class="tab__contacts__row">
+									<div class="tab__contacts__text">
+										<h4 class="tab__contacts__title">Контакты</h4>
+										<ul>
+											<li class="tab__contacts__list">
+												<i class="fa-solid fa-phone"></i>
+												<p>+7(987)654-32-10</p>
+											</li>
+											<li class="tab__contacts__list">
+												<i class="fa-solid fa-phone"></i>
+												<p>+7(987)654-32-10</p>
+											</li>
+											<li class="tab__contacts__list">
+												<i class="fa-solid fa-envelope"></i>
+												<p>weeweewine@gmail.com</p>
+											</li>
+											<li class="tab__contacts__list">
+												<i class="fa-solid fa-location-dot"></i>
+												<p>Екатеринбург, ул. 8 Марта, дом 34</p>
+											</li>
+											<li>
+												<button class="button footer__button">Связаться с нами</button>
+											</li>
+										</ul>
+									</div>
+									<div class="tab__contacts__map">
+										<img src="../Wine/img/contacts/contact-map.webp" alt="map">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="tab__shopping">
+					<div class="container" style="padding: 0px !important;">
+						<div class="shopping">
+							<div id="shopping" class="shopping__content">
+							</div>
+							<div class="shopping__btns">
+								<button id='shopping__exit' class='button'>Вернуться в магазин</button>
+								<button id='shopping__pay' class='button'>Оплатить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<h3 class="block__title">Навигация</h3>
+					<nav class="footer__menu block__text">
+						<div class="footer__img">
+							<img src="../Wine/img/icons/logo.svg" alt="wine__logo">
+						</div>
+						<ul class="footer__list">
+							<li>
+								<div id="footer__link" class="footer__link">Главная</div>
+							</li>
+							<li>
+								<div id="footer__link" class="footer__link">Каталог</div>
+							</li>
+							<li>
+								<div id="footer__link" class="footer__link">Контакты</div>
+							</li>
+							<li>
+								<button class="button footer__button">Связаться с нами</button>
+							</li>
+						</ul>
+					</nav>
+					<h3 class="block__title">Наши контакты</h3>
+					<div class="footer__links block__text">
+						<div class="footer__soc">
+							<li>
+								<a href="#"><div class="footer__soc__link"><img src="../Wine/img/icons/telegram.svg" alt="telegram"></div></a>
+							</li>
+							<li>
+								<a href="#"><div class="footer__soc__link"><img src="../Wine/img/icons/vk.svg" alt="vk"></div></a>
+							</li>
+							<li>
+								<a href="#"><div class="footer__soc__link"><img src="../Wine/img/icons/in.svg" alt="in"></div></a>
+							</li>
+							<li>
+								<a href="#"><div class="footer__soc__link"><img src="../Wine/img/icons/inst.svg" alt="inst"></div></a>
+							</li>
+						</div>
+						<div class="footer__contacts">
+							<li>
+								<i class="fa-solid fa-phone"></i>
+								<p>+7(987)654-32-10</p>
+							</li>
+							<li>
+								<i class="fa-solid fa-envelope"></i>
+								<p>weeweewine@gmail.com</p>
+							</li>
+						</div>
+					</div>
+					<h6 class="footer__copyrighted">2015-2022 “WeeWeeWine” All rights reserved</h6>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="utils/localStorageUtils.js"></script>
+	<script src="constants/root.js"></script>
+	<script src="constants/catalog.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://kit.fontawesome.com/cdd40c5823.js" crossorigin="anonymous"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="components/Header/Header.js"></script>
+	<script src="components/Products/Products.js"></script>
+	<script src="components/Shopping/Shopping.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

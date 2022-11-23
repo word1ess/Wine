@@ -1,0 +1,76 @@
+@import "_header.scss", "_main.scss", "_footer.scss", "_null.scss", "_variable.scss", "_slider.scss", "_adaptive.scss";
+body{
+    font-family: $nunito;
+    margin: 0;
+}
+//оболочка страницы
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+//контент самой страницы(без footer и header)
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    background: $white;
+}
+//ограниивающий контейнер
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+    z-index: 1000;
+    height: 100%;
+    padding: 0 29px;
+    position: relative;
+}
+
+// кнопка
+.button{
+    font-size: $h6;
+    color: $white;
+    background: $wine;
+    font-weight: $bold;
+    border-radius: 24px;
+    border: 2px solid $wine;
+    transition: all 200ms ease;
+
+    &:hover{
+        background: transparent;
+        color: $wine;
+    }
+}
+
+// title
+.tab__title{
+    font-size: $h4;
+    color: $primary;
+    font-weight: $bold;
+}
+
+/* W3C standard
+   сейчас только для Firefox */
+   * {
+    scrollbar-width: thin;
+    scrollbar-color: $white $wine;
+
+  }
+  
+  /* для Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+  }
+  *::-webkit-scrollbar-track {
+    background: $white;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: $wine;
+    border-radius: 5px;
+    border: 3px solid $white;
+  }
+
